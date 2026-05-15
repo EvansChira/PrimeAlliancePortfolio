@@ -10,237 +10,387 @@
 </head>
 
 <body>
+    <!-- HEADER -->
     <header
-        class="fixed top-[24px] left-[128px] right-[128px] bg-white shadow-md rounded-[16px] px-[32px] py-[16px] z-50">
+        class="fixed top-0 sm:top-[16px] left-0 right-0 sm:left-4 sm:right-4 lg:left-[64px] lg:right-[64px] xl:left-[128px] xl:right-[128px] bg-white shadow-md sm:rounded-[16px] px-5 sm:px-[32px] py-[14px] sm:py-[16px] z-50">
         <nav class="flex justify-between items-center">
-            <!-- lOGO -->
-            <a href="" class="">Prime Alliance</a>
-            <ul class="flex items-center gap-8">
-                <li>
-                    <a href="" class="">Home</a>
-                </li>
-                <li>
-                    <a href="about.html" class="">About</a>
-                </li>
-                <li>
-                    <a href="service.html" class="">Services</a>
-                </li>
-                <li>
-                    <a href="" class="">Home</a>
-                </li>
+            <!-- LOGO -->
+            <a href="" class="font-bold text-[18px]">Prime Alliance</a>
+
+            <!-- Desktop Nav -->
+            <ul class="hidden md:flex items-center gap-8">
+                <li><a href="" class="">Home</a></li>
+                <li><a href="about.html" class="">About</a></li>
+                <li><a href="service.html" class="">Services</a></li>
+                <li><a href="" class="">Projects</a></li>
             </ul>
-            <a href="" class="">Contact us</a>
+
+            <a href="" class="hidden md:inline-block">Contact us</a>
+
+            <!-- Mobile Hamburger -->
+            <button id="menu-toggle" class="md:hidden flex flex-col gap-[5px] p-1" aria-label="Toggle menu">
+                <span class="block w-6 h-[2px] bg-black transition-all duration-300" id="bar1"></span>
+                <span class="block w-6 h-[2px] bg-black transition-all duration-300" id="bar2"></span>
+                <span class="block w-6 h-[2px] bg-black transition-all duration-300" id="bar3"></span>
+            </button>
         </nav>
-    </header>
-    <!-- Home section -->
-    <section class="min-h-screen h-screen relative flex items-end justify-start px-[128px] py-[96px]">
-        <!-- Hero overlay -->
-        <div class="absolute h-full w-full inset-0 bg-gradient-to-b from-black/20 via-black/80 to-black/90 z-10"></div>
-        <!-- Background image -->
-        <div class="absolute inset-0 z-0">
-            <img src="assets/images/Logistics.jpg" class="w-full h-full object-cover" alt="Hero background">
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden flex-col gap-4 pt-4 pb-2 border-t border-gray-100 mt-3">
+            <a href="" class="text-[15px] py-1">Home</a>
+            <a href="about.html" class="text-[15px] py-1">About</a>
+            <a href="service.html" class="text-[15px] py-1">Services</a>
+            <a href="" class="text-[15px] py-1">Projects</a>
+            <a href="" class="text-[15px] py-1 font-medium">Contact us</a>
         </div>
-        <!-- Hero content -->
-        <div class="relative z-20 max-w-[900px] flex flex-col gap-[28px] text-white">
-            <h1 class="text-[64px] leading-[72px] tracking-[-1.5px]">Integrated Supply, Logistics, Consulting & Business
-                Solutions
-                for Industrial Growth</h1>
-            <p class="text-[20px] leading-[32px] max-w-[760px] text-gray-200">We provide reliable procurement,
-                logistics, ICT equipment, construction materials, machinery,
-                and consultancy services for businesses and government institutions across multiple sectors.</p>
-            <a href="service.html" class="">Explore services</a>
+    </header>
+
+    <!-- HOME SECTION -->
+<section class="min-h-screen relative flex items-center justify-start px-5 py-24 sm:px-12 sm:py-28 md:px-16 lg:px-[128px] lg:py-[120px]">
+    <!-- Hero overlay -->
+    <div class="absolute h-full w-full inset-0 bg-gradient-to-b from-black/20 via-black/80 to-black/90 z-10"></div>
+    <!-- Background image -->
+    <div class="absolute inset-0 z-0">
+        <img src="assets/images/Logistics.jpg" class="w-full h-full object-cover" alt="Hero background">
+    </div>
+    <!-- Hero content -->
+    <div class="relative z-20 max-w-[900px] flex flex-col gap-4 sm:gap-5 lg:gap-[28px] text-white">
+        <h1 class="text-[32px] leading-[40px] sm:text-[44px] sm:leading-[52px] md:text-[54px] md:leading-[62px] lg:text-[64px] lg:leading-[72px] tracking-[-1.5px]">
+            Integrated Supply, Logistics, Consulting & Business Solutions for Industrial Growth
+        </h1>
+        <p class="text-[15px] leading-[26px] sm:text-[17px] sm:leading-[28px] lg:text-[20px] lg:leading-[32px] max-w-[680px] text-gray-300">
+            We provide reliable procurement, logistics, ICT equipment, construction materials, machinery,
+            and consultancy services for businesses and government institutions across multiple sectors.
+        </p>
+        <div class="flex flex-wrap items-center gap-3 sm:gap-4 pt-2">
+            <a href="service.html"
+                class="inline-block bg-[#00A651] text-white text-[14px] sm:text-[15px] font-medium px-6 sm:px-7 py-3 rounded-[10px] hover:bg-[#008f45] transition duration-300">
+                Explore Our Services
+            </a>
+        </div>
+    </div>
+</section>
+
+    <!-- ABOUT SECTION -->
+    <section class="px-5 py-12 sm:px-12 sm:py-16 md:px-16 md:py-20 lg:px-[128px] lg:py-[96px]">
+        <div class="flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-[64px]">
+
+            <!-- LEFT: Images -->
+            <div class="relative w-full lg:w-1/2 shrink-0">
+
+                <!-- Main image -->
+                <div class="rounded-[20px] overflow-hidden aspect-[4/3] w-full">
+                    <img src="https://kpdclearing.co.tz/wp-content/uploads/2023/01/forklift-working-in-the-container-cargo-yard-port-loading-cargo-tank-logistic-service-and-transport-e1665466492906.jpg"
+                        alt="Logistics operations" class="w-full h-full object-cover">
+                </div>
+
+                <!-- Overlapping smaller image -->
+                <div
+                    class="absolute bottom-[-32px] right-[-16px] sm:right-[-24px] w-[45%] rounded-[16px] overflow-hidden shadow-xl border-4 border-white aspect-[3/2]">
+                    <img src="https://kpdclearing.co.tz/wp-content/uploads/2023/01/air-6.png" alt="Air freight"
+                        class="w-full h-full object-cover">
+                </div>
+
+                <!-- Years of Experience badge -->
+                <div
+                    class="absolute top-[-16px] left-[-8px] sm:left-[-16px] bg-[#00A651] text-white rounded-[16px] px-5 py-4 shadow-lg flex flex-col items-center justify-center min-w-[110px]">
+                    <span class="text-[36px] sm:text-[40px] font-bold leading-none">25+</span>
+                    <span class="text-[12px] sm:text-[13px] font-medium text-center leading-[18px] mt-1">Years of
+                        Experience</span>
+                </div>
+
+            </div>
+
+            <!-- RIGHT: Content -->
+            <div class="w-full lg:w-1/2 flex flex-col gap-5 lg:gap-[24px] lg:pb-0 pb-8">
+
+                <!-- Label -->
+                <p class="text-[#00A651] text-[14px] sm:text-[16px] font-semibold tracking-[2px] uppercase">
+                    About Company
+                </p>
+
+                <!-- Heading -->
+                <h2
+                    class="text-[28px] leading-[36px] sm:text-[38px] sm:leading-[46px] lg:text-[48px] lg:leading-[56px] tracking-[-1px] text-[#003C13]">
+                    Logistics that is dedicated to your company
+                </h2>
+
+                <!-- Intro text -->
+                <p class="text-[15px] sm:text-[16px] leading-[26px] sm:leading-[28px] text-gray-500">
+                    We arrange and clear customs for any import or export, airfreight or sea freight shipment.
+                </p>
+
+                <!-- Points -->
+                <div class="flex flex-col gap-5">
+
+                    <!-- Point 1 -->
+                    <div class="flex flex-col gap-[6px]">
+                        <div class="flex items-center gap-[10px]">
+                            <span
+                                class="w-5 h-5 shrink-0 flex items-center justify-center rounded-full bg-[#00A651]/10">
+                                <svg class="w-3 h-3 text-[#00A651]" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                                </svg>
+                            </span>
+                            <h4 class="text-[15px] sm:text-[16px] font-semibold text-[#003C13]">Objective</h4>
+                        </div>
+                        <p class="text-[14px] sm:text-[15px] leading-[24px] text-gray-500 pl-[30px]">
+                            The company's objective is to maintain its professional identity and principles.
+                        </p>
+                    </div>
+
+                    <!-- Point 2 -->
+                    <div class="flex flex-col gap-[6px]">
+                        <div class="flex items-center gap-[10px]">
+                            <span
+                                class="w-5 h-5 shrink-0 flex items-center justify-center rounded-full bg-[#00A651]/10">
+                                <svg class="w-3 h-3 text-[#00A651]" fill="none" stroke="currentColor" stroke-width="2.5"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                                </svg>
+                            </span>
+                            <h4 class="text-[15px] sm:text-[16px] font-semibold text-[#003C13]">Trust and Openness</h4>
+                        </div>
+                        <p class="text-[14px] sm:text-[15px] leading-[24px] text-gray-500 pl-[30px]">
+                            We believe in trust and openness in all our dealings.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- CTA Button -->
+                <div class="pt-2">
+                    <a href="about.html"
+                        class="inline-block bg-[#00A651] text-white text-[15px] font-medium px-7 py-3 rounded-[10px] hover:bg-[#008f45] transition duration-300">
+                        Discover More
+                    </a>
+                </div>
+
+            </div>
         </div>
     </section>
-    <!-- About section -->
-    <section class=""></section>
-    <!-- Service section -->
-    <section class="px-[128px] py-[96px]">
-        <div class="text-center flex flex-col gap-[24px] mb-[80px]">
-            <h2 class="text-[60px] leading-[64px] tracking-[-1px]">Solutions That Power Your Business</h2>
-            <p class="text-[16px] leading-[24px] text-gray-500">We provide integrated supply, logistics, ICT,
-                construction, and consultancy services designed to support growth, efficiency, and reliable operations
-                across industries.</p>
+
+    <!-- SERVICES SECTION -->
+    <section class="px-5 py-12 sm:px-12 sm:py-16 md:px-16 md:py-20 lg:px-[128px] lg:py-[96px]">
+        <div class="text-center flex flex-col gap-3 sm:gap-[24px] mb-10 sm:mb-14 lg:mb-[80px]">
+            <h2
+                class="text-[32px] leading-[38px] sm:text-[44px] sm:leading-[50px] lg:text-[60px] lg:leading-[64px] tracking-[-1px]">
+                Solutions That Power Your Business
+            </h2>
+            <p class="text-[15px] leading-[24px] text-gray-500 max-w-[640px] mx-auto">
+                We provide integrated supply, logistics, ICT, construction, and consultancy services designed
+                to support growth, efficiency, and reliable operations across industries.
+            </p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[32px]">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-[32px]">
+
+            <!-- Card 1 -->
             <div
                 class="flex flex-col bg-white rounded-[20px] lg:rounded-[unset] overflow-hidden shadow-sm lg:shadow-none">
-                <div class="aspect-[4/5] lg:aspect-[5/4] shrink-0 lg:rounded-[20px] overflow-hidden relative group">
+                <div
+                    class="aspect-[4/3] sm:aspect-[4/5] lg:aspect-[5/4] shrink-0 lg:rounded-[20px] overflow-hidden relative group">
                     <img src="assets/images/Logistics & Supply Chain Management.jpg" alt=""
                         class="h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110">
-                    <!--Hero overlay -->
                     <div
                         class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     </div>
                 </div>
-                <div class="p-[25px] lg:p-0 lg:pt-[25px] flex-1 flex flex-col gap-[10px]">
+                <div class="p-5 lg:p-0 lg:pt-[25px] flex-1 flex flex-col gap-[10px]">
                     <h3
-                        class="font-general font-[400] lg:text-[30px] lg:leading-[30px] lg:tracking-[-1px] [&_span]:relative [&_span]:inline-block [&_span]:after:content-[' '] [&_span]:after:absolute [&_span]:after:bottom-[-1px] [&_span]:after:left-0 [&_span]:after:right-0 [&_span]:after:h-[2px] [&_span]:after:bg-[currentcolor] text-noovo-black text-[20px] xl:text-[28px] leading-[20px] xl:leading-[30px] lg:mb-[10px]">
-                        Logistics & Supply Chain Management</h3>
-                    <p
-                        class="font-general font-[400] text-[16px] leading-[22px] text-noovo-grey lg:text-[min(1.4vw,16px)] lg:leading-[min(1.6vw,18px)] xl:text-[16px] xl:leading-[19px] 2xl:text-[17px] 2xl:leading-[20px]">
+                        class="font-[400] lg:text-[30px] lg:leading-[30px] lg:tracking-[-1px] text-[18px] sm:text-[20px] xl:text-[28px] leading-[24px] xl:leading-[30px] lg:mb-[10px]">
+                        Logistics & Supply Chain Management
+                    </h3>
+                    <p class="text-[14px] sm:text-[16px] leading-[22px] text-gray-500">
                         We provide reliable freight forwarding, transportation, warehousing, and distribution services
-                        to ensure smooth movement of goods across local and international markets</p>
+                        to ensure smooth movement of goods across local and international markets.
+                    </p>
                 </div>
             </div>
+
+            <!-- Card 2 -->
             <div
                 class="flex flex-col bg-white rounded-[20px] lg:rounded-[unset] overflow-hidden shadow-sm lg:shadow-none">
-                <div class="aspect-[4/5] lg:aspect-[5/4] shrink-0 lg:rounded-[20px] overflow-hidden relative group">
+                <div
+                    class="aspect-[4/3] sm:aspect-[4/5] lg:aspect-[5/4] shrink-0 lg:rounded-[20px] overflow-hidden relative group">
                     <img src="assets/images/Construction & Mining Supplies.jpg" alt=""
                         class="h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110">
-                    <!-- Overlay -->
                     <div
                         class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     </div>
                 </div>
-                <div class="p-[25px] lg:p-0 lg:pt-[25px] flex-1 flex flex-col gap-[10px]">
+                <div class="p-5 lg:p-0 lg:pt-[25px] flex-1 flex flex-col gap-[10px]">
                     <h3
-                        class="font-general font-[400] lg:text-[30px] lg:leading-[30px] lg:tracking-[-1px] [&_span]:relative [&_span]:inline-block [&_span]:after:content-[' '] [&_span]:after:absolute [&_span]:after:bottom-[-1px] [&_span]:after:left-0 [&_span]:after:right-0 [&_span]:after:h-[2px] [&_span]:after:bg-[currentcolor] text-noovo-black text-[20px] xl:text-[28px] leading-[20px] xl:leading-[30px] lg:mb-[10px]">
-                        Construction & Mining Supplies</h3>
-                    <p
-                        class="font-general font-[400] text-[16px] leading-[22px] text-noovo-grey lg:text-[min(1.4vw,16px)] lg:leading-[min(1.6vw,18px)] xl:text-[16px] xl:leading-[19px] 2xl:text-[17px] 2xl:leading-[20px]">
+                        class="font-[400] lg:text-[30px] lg:leading-[30px] lg:tracking-[-1px] text-[18px] sm:text-[20px] xl:text-[28px] leading-[24px] xl:leading-[30px] lg:mb-[10px]">
+                        Construction & Mining Supplies
+                    </h3>
+                    <p class="text-[14px] sm:text-[16px] leading-[22px] text-gray-500">
                         We supply high-quality construction materials, mining equipment, and industrial tools to support
-                        infrastructure development and resource extraction projects.</p>
+                        infrastructure development and resource extraction projects.
+                    </p>
                 </div>
             </div>
+
+            <!-- Card 3 -->
             <div
                 class="flex flex-col bg-white rounded-[20px] lg:rounded-[unset] overflow-hidden shadow-sm lg:shadow-none">
-                <div class="aspect-[4/5] lg:aspect-[5/4] shrink-0 lg:rounded-[20px] overflow-hidden relative group">
+                <div
+                    class="aspect-[4/3] sm:aspect-[4/5] lg:aspect-[5/4] shrink-0 lg:rounded-[20px] overflow-hidden relative group">
                     <img src="assets/images/ICT Equipment Supply.jpg" alt=""
                         class="h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110">
-                    <!-- Overlay -->
                     <div
                         class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     </div>
                 </div>
-                <div class="p-[25px] lg:p-0 lg:pt-[25px] flex-1 flex flex-col gap-[10px]">
+                <div class="p-5 lg:p-0 lg:pt-[25px] flex-1 flex flex-col gap-[10px]">
                     <h3
-                        class="font-general font-[400] lg:text-[30px] lg:leading-[30px] lg:tracking-[-1px] [&_span]:relative [&_span]:inline-block [&_span]:after:content-[' '] [&_span]:after:absolute [&_span]:after:bottom-[-1px] [&_span]:after:left-0 [&_span]:after:right-0 [&_span]:after:h-[2px] [&_span]:after:bg-[currentcolor] text-noovo-black text-[20px] xl:text-[28px] leading-[20px] xl:leading-[30px] lg:mb-[10px]">
-                        ICT Equipment Supply</h3>
-                    <p
-                        class="font-general font-[400] text-[16px] leading-[22px] text-noovo-grey lg:text-[min(1.4vw,16px)] lg:leading-[min(1.6vw,18px)] xl:text-[16px] xl:leading-[19px] 2xl:text-[17px] 2xl:leading-[20px]">
+                        class="font-[400] lg:text-[30px] lg:leading-[30px] lg:tracking-[-1px] text-[18px] sm:text-[20px] xl:text-[28px] leading-[24px] xl:leading-[30px] lg:mb-[10px]">
+                        ICT Equipment Supply
+                    </h3>
+                    <p class="text-[14px] sm:text-[16px] leading-[22px] text-gray-500">
                         We deliver computers, servers, networking devices, and IT infrastructure solutions that support
-                        modern digital operations for businesses and institutions.</p>
+                        modern digital operations for businesses and institutions.
+                    </p>
                 </div>
             </div>
+
+            <!-- Card 4 -->
             <div
                 class="flex flex-col bg-white rounded-[20px] lg:rounded-[unset] overflow-hidden shadow-sm lg:shadow-none">
-                <div class="aspect-[4/5] lg:aspect-[5/4] shrink-0 lg:rounded-[20px] overflow-hidden relative group">
+                <div
+                    class="aspect-[4/3] sm:aspect-[4/5] lg:aspect-[5/4] shrink-0 lg:rounded-[20px] overflow-hidden relative group">
                     <img src="assets/images/Office & General Supplies.jpg" alt=""
                         class="h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110">
-                    <!-- Overlay -->
                     <div
                         class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     </div>
                 </div>
-                <div class="p-[25px] lg:p-0 lg:pt-[25px] flex-1 flex flex-col gap-[10px]">
+                <div class="p-5 lg:p-0 lg:pt-[25px] flex-1 flex flex-col gap-[10px]">
                     <h3
-                        class="font-general font-[400] lg:text-[30px] lg:leading-[30px] lg:tracking-[-1px] [&_span]:relative [&_span]:inline-block [&_span]:after:content-[' '] [&_span]:after:absolute [&_span]:after:bottom-[-1px] [&_span]:after:left-0 [&_span]:after:right-0 [&_span]:after:h-[2px] [&_span]:after:bg-[currentcolor] text-noovo-black text-[20px] xl:text-[28px] leading-[20px] xl:leading-[30px] lg:mb-[10px]">
-                        Office & General Supplies</h3>
-                    <p
-                        class="font-general font-[400] text-[16px] leading-[22px] text-noovo-grey lg:text-[min(1.4vw,16px)] lg:leading-[min(1.6vw,18px)] xl:text-[16px] xl:leading-[19px] 2xl:text-[17px] 2xl:leading-[20px]">
+                        class="font-[400] lg:text-[30px] lg:leading-[30px] lg:tracking-[-1px] text-[18px] sm:text-[20px] xl:text-[28px] leading-[24px] xl:leading-[30px] lg:mb-[10px]">
+                        Office & General Supplies
+                    </h3>
+                    <p class="text-[14px] sm:text-[16px] leading-[22px] text-gray-500">
                         We provide essential office equipment, stationery, and general goods to ensure smooth daily
-                        operations for organizations of all sizes.</p>
+                        operations for organizations of all sizes.
+                    </p>
                 </div>
             </div>
+
+            <!-- Card 5 -->
             <div
                 class="flex flex-col bg-white rounded-[20px] lg:rounded-[unset] overflow-hidden shadow-sm lg:shadow-none">
-                <div class="aspect-[4/5] lg:aspect-[5/4] shrink-0 lg:rounded-[20px] overflow-hidden relative group">
+                <div
+                    class="aspect-[4/3] sm:aspect-[4/5] lg:aspect-[5/4] shrink-0 lg:rounded-[20px] overflow-hidden relative group">
                     <img src="assets/images/Machinery & Industrial Accessories.jpg" alt=""
                         class="h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110">
-                    <!-- Overlay -->
                     <div
                         class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     </div>
                 </div>
-                <div class="p-[25px] lg:p-0 lg:pt-[25px] flex-1 flex flex-col gap-[10px]">
+                <div class="p-5 lg:p-0 lg:pt-[25px] flex-1 flex flex-col gap-[10px]">
                     <h3
-                        class="font-general font-[400] lg:text-[30px] lg:leading-[30px] lg:tracking-[-1px] [&_span]:relative [&_span]:inline-block [&_span]:after:content-[' '] [&_span]:after:absolute [&_span]:after:bottom-[-1px] [&_span]:after:left-0 [&_span]:after:right-0 [&_span]:after:h-[2px] [&_span]:after:bg-[currentcolor] text-noovo-black text-[20px] xl:text-[28px] leading-[20px] xl:leading-[30px] lg:mb-[10px]">
-                        Machinery & Industrial Accessories</h3>
-                    <p
-                        class="font-general font-[400] text-[16px] leading-[22px] text-noovo-grey lg:text-[min(1.4vw,16px)] lg:leading-[min(1.6vw,18px)] xl:text-[16px] xl:leading-[19px] 2xl:text-[17px] 2xl:leading-[20px]">
+                        class="font-[400] lg:text-[30px] lg:leading-[30px] lg:tracking-[-1px] text-[18px] sm:text-[20px] xl:text-[28px] leading-[24px] xl:leading-[30px] lg:mb-[10px]">
+                        Machinery & Industrial Accessories
+                    </h3>
+                    <p class="text-[14px] sm:text-[16px] leading-[22px] text-gray-500">
                         We supply durable machinery, spare parts, and industrial accessories used in manufacturing,
-                        construction, and engineering industries.</p>
+                        construction, and engineering industries.
+                    </p>
                 </div>
             </div>
+
+            <!-- Card 6 -->
             <div
                 class="flex flex-col bg-white rounded-[20px] lg:rounded-[unset] overflow-hidden shadow-sm lg:shadow-none">
-                <div class="aspect-[4/5] lg:aspect-[5/4] shrink-0 lg:rounded-[20px] overflow-hidden relative group">
+                <div
+                    class="aspect-[4/3] sm:aspect-[4/5] lg:aspect-[5/4] shrink-0 lg:rounded-[20px] overflow-hidden relative group">
                     <img src="assets/images/Software Solutions & Development.jpg" alt=""
                         class="h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110">
-                    <!-- Overlay -->
                     <div
                         class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     </div>
                 </div>
-                <div class="p-[25px] lg:p-0 lg:pt-[25px] flex-1 flex flex-col gap-[10px]">
+                <div class="p-5 lg:p-0 lg:pt-[25px] flex-1 flex flex-col gap-[10px]">
                     <h3
-                        class="font-general font-[400] lg:text-[30px] lg:leading-[30px] lg:tracking-[-1px] [&_span]:relative [&_span]:inline-block [&_span]:after:content-[' '] [&_span]:after:absolute [&_span]:after:bottom-[-1px] [&_span]:after:left-0 [&_span]:after:right-0 [&_span]:after:h-[2px] [&_span]:after:bg-[currentcolor] text-noovo-black text-[20px] xl:text-[28px] leading-[20px] xl:leading-[30px] lg:mb-[10px]">
-                        Software Solutions & Development</h3>
-                    <p
-                        class="font-general font-[400] text-[16px] leading-[22px] text-noovo-grey lg:text-[min(1.4vw,16px)] lg:leading-[min(1.6vw,18px)] xl:text-[16px] xl:leading-[19px] 2xl:text-[17px] 2xl:leading-[20px]">
+                        class="font-[400] lg:text-[30px] lg:leading-[30px] lg:tracking-[-1px] text-[18px] sm:text-[20px] xl:text-[28px] leading-[24px] xl:leading-[30px] lg:mb-[10px]">
+                        Software Solutions & Development
+                    </h3>
+                    <p class="text-[14px] sm:text-[16px] leading-[22px] text-gray-500">
                         We design and develop custom software systems that help businesses automate processes, improve
-                        efficiency, and support digital transformation.</p>
+                        efficiency, and support digital transformation.
+                    </p>
                 </div>
             </div>
+
+            <!-- Card 7 -->
             <div
                 class="flex flex-col bg-white rounded-[20px] lg:rounded-[unset] overflow-hidden shadow-sm lg:shadow-none">
-                <div class="aspect-[4/5] lg:aspect-[5/4] shrink-0 lg:rounded-[20px] overflow-hidden relative group">
+                <div
+                    class="aspect-[4/3] sm:aspect-[4/5] lg:aspect-[5/4] shrink-0 lg:rounded-[20px] overflow-hidden relative group">
                     <img src="assets/images/Tax & Business Consultancy.jpg" alt=""
                         class="h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110">
-                    <!-- Overlay -->
                     <div
                         class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     </div>
                 </div>
-                <div class="p-[25px] lg:p-0 lg:pt-[25px] flex-1 flex flex-col gap-[10px]">
+                <div class="p-5 lg:p-0 lg:pt-[25px] flex-1 flex flex-col gap-[10px]">
                     <h3
-                        class="font-general font-[400] lg:text-[30px] lg:leading-[30px] lg:tracking-[-1px] [&_span]:relative [&_span]:inline-block [&_span]:after:content-[' '] [&_span]:after:absolute [&_span]:after:bottom-[-1px] [&_span]:after:left-0 [&_span]:after:right-0 [&_span]:after:h-[2px] [&_span]:after:bg-[currentcolor] text-noovo-black text-[20px] xl:text-[28px] leading-[20px] xl:leading-[30px] lg:mb-[10px]">
-                        Tax & Business Consultancy</h3>
-                    <p
-                        class="font-general font-[400] text-[16px] leading-[22px] text-noovo-grey lg:text-[min(1.4vw,16px)] lg:leading-[min(1.6vw,18px)] xl:text-[16px] xl:leading-[19px] 2xl:text-[17px] 2xl:leading-[20px]">
+                        class="font-[400] lg:text-[30px] lg:leading-[30px] lg:tracking-[-1px] text-[18px] sm:text-[20px] xl:text-[28px] leading-[24px] xl:leading-[30px] lg:mb-[10px]">
+                        Tax & Business Consultancy
+                    </h3>
+                    <p class="text-[14px] sm:text-[16px] leading-[22px] text-gray-500">
                         We offer professional tax advisory and business consultancy services to help organizations stay
-                        compliant, optimize operations, and make informed decisions.</p>
+                        compliant, optimize operations, and make informed decisions.
+                    </p>
                 </div>
             </div>
+
+            <!-- Card 8 -->
             <div
                 class="flex flex-col bg-white rounded-[20px] lg:rounded-[unset] overflow-hidden shadow-sm lg:shadow-none">
-                <div class="aspect-[4/5] lg:aspect-[5/4] shrink-0 lg:rounded-[20px] overflow-hidden relative group">
+                <div
+                    class="aspect-[4/3] sm:aspect-[4/5] lg:aspect-[5/4] shrink-0 lg:rounded-[20px] overflow-hidden relative group">
                     <img src="assets/images/Tendering & Procurement Services.jpg" alt=""
                         class="h-full w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110">
-                    <!-- Overlay -->
                     <div
                         class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     </div>
                 </div>
-                <div class="p-[25px] lg:p-0 lg:pt-[25px] flex-1 flex flex-col gap-[10px]">
+                <div class="p-5 lg:p-0 lg:pt-[25px] flex-1 flex flex-col gap-[10px]">
                     <h3
-                        class="font-general font-[400] lg:text-[30px] lg:leading-[30px] lg:tracking-[-1px] [&_span]:relative [&_span]:inline-block [&_span]:after:content-[' '] [&_span]:after:absolute [&_span]:after:bottom-[-1px] [&_span]:after:left-0 [&_span]:after:right-0 [&_span]:after:h-[2px] [&_span]:after:bg-[currentcolor] text-noovo-black text-[20px] xl:text-[28px] leading-[20px] xl:leading-[30px] lg:mb-[10px]">
-                        Tendering & Procurement Services</h3>
-                    <p
-                        class="font-general font-[400] text-[16px] leading-[22px] text-noovo-grey lg:text-[min(1.4vw,16px)] lg:leading-[min(1.6vw,18px)] xl:text-[16px] xl:leading-[19px] 2xl:text-[17px] 2xl:leading-[20px]">
+                        class="font-[400] lg:text-[30px] lg:leading-[30px] lg:tracking-[-1px] text-[18px] sm:text-[20px] xl:text-[28px] leading-[24px] xl:leading-[30px] lg:mb-[10px]">
+                        Tendering & Procurement Services
+                    </h3>
+                    <p class="text-[14px] sm:text-[16px] leading-[22px] text-gray-500">
                         We assist clients in preparing, managing, and executing tender processes and procurement
-                        activities for government and private sector projects.</p>
+                        activities for government and private sector projects.
+                    </p>
                 </div>
             </div>
+
         </div>
     </section>
-    <footer class="min-h-screen h-screen relative px-[128px] py-[96px]">
+
+    <!-- FOOTER -->
+    <footer class="relative px-5 py-12 sm:px-12 sm:py-16 md:px-16 md:py-20 lg:px-[128px] lg:py-[96px]">
         <!-- Footer overlay -->
         <div class="absolute h-full w-full inset-0 bg-gradient-to-b from-black/70 via-black/80 to-black/90 z-10"></div>
         <!-- Footer background -->
         <div class="absolute inset-0 z-0">
-            <img src="assets/images/IMG-20260506-WA0056.jpg" class="w-full h-full object-cover" alt="Hero background">
+            <img src="assets/images/IMG-20260506-WA0056.jpg" class="w-full h-full object-cover" alt="Footer background">
         </div>
         <!-- Footer content -->
-        <div class="relative z-20 flex flex-col gap-[28px] text-white">
-            <div class="grid grid-cols-4 gap-[48px] pt-[48px] pb-[60px]">
+        <div class="relative z-20 flex flex-col gap-6 lg:gap-[28px] text-white">
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-[48px] pt-8 pb-10 lg:pt-[48px] lg:pb-[60px]">
 
                 <!-- LOGO + DESCRIPTION -->
-                <div class="flex flex-col gap-[16px]">
-                    <h2 class="text-[20px] font-bold text-[#ffffff]">
-                        Prime Alliance
-                    </h2>
-                    <p class="text-[14px] leading-[24px] text-[#ffffff]">
+                <div class="col-span-1 sm:col-span-2 lg:col-span-1 flex flex-col gap-[16px]">
+                    <h2 class="text-[20px] font-bold">Prime Alliance</h2>
+                    <p class="text-[14px] leading-[24px] text-white/80 max-w-[280px]">
                         Integrated supply, logistics, ICT, construction, and consultancy services
                         delivering reliable business solutions across industries.
                     </p>
@@ -248,71 +398,89 @@
 
                 <!-- COMPANY -->
                 <div class="flex flex-col gap-[12px]">
-                    <h3 class="text-[16px] font-semibold text-[#ffffff]">Company</h3>
-
-                    <a href="#" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">About Us</a>
-                    <a href="#" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">Services</a>
-                    <a href="#" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">Solutions</a>
-                    <a href="#" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">Careers</a>
+                    <h3 class="text-[16px] font-semibold mb-1">Company</h3>
+                    <a href="#" class="text-[14px] text-white/80 hover:text-white transition-colors">About Us</a>
+                    <a href="#" class="text-[14px] text-white/80 hover:text-white transition-colors">Services</a>
+                    <a href="#" class="text-[14px] text-white/80 hover:text-white transition-colors">Solutions</a>
+                    <a href="#" class="text-[14px] text-white/80 hover:text-white transition-colors">Careers</a>
                 </div>
 
                 <!-- SERVICES -->
                 <div class="flex flex-col gap-[12px]">
-                    <h3 class="text-[16px] font-semibold text-[#ffffff]">Services</h3>
-
-                    <a href="#" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">Logistics</a>
-                    <a href="#" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">Construction Supply</a>
-                    <a href="#" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">ICT Solutions</a>
-                    <a href="#" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">Consultancy</a>
+                    <h3 class="text-[16px] font-semibold mb-1">Services</h3>
+                    <a href="#" class="text-[14px] text-white/80 hover:text-white transition-colors">Logistics</a>
+                    <a href="#" class="text-[14px] text-white/80 hover:text-white transition-colors">Construction
+                        Supply</a>
+                    <a href="#" class="text-[14px] text-white/80 hover:text-white transition-colors">ICT Solutions</a>
+                    <a href="#" class="text-[14px] text-white/80 hover:text-white transition-colors">Consultancy</a>
                 </div>
 
                 <!-- CONTACT -->
                 <div class="flex flex-col gap-[12px]">
-                    <h3 class="text-[16px] font-semibold text-[#ffffff]">Contact</h3>
-
-                    <p class="text-[14px] text-[#ffffff]">Dar es Salaam, Tanzania</p>
-                    <a href="tel:+255700000000" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">
-                        +255 700 000 000
-                    </a>
-                    <a href="mailto:info@primealliance.com" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">
-                        info@primealliance.com
-                    </a>
+                    <h3 class="text-[16px] font-semibold mb-1">Contact</h3>
+                    <p class="text-[14px] text-white/80">Dar es Salaam, Tanzania</p>
+                    <a href="tel:+255700000000"
+                        class="text-[14px] text-white/80 hover:text-white transition-colors">+255 700 000 000</a>
+                    <a href="mailto:info@primealliance.com"
+                        class="text-[14px] text-white/80 hover:text-white transition-colors break-all">info@primealliance.com</a>
                 </div>
 
             </div>
-            <div>
-                <h1 class="text-[220px] text-center font-medium">Prime Alliance</h1>
+
+            <!-- Big wordmark -->
+            <div class="overflow-hidden">
+                <h1
+                    class="text-[13vw] sm:text-[12vw] lg:text-[11vw] xl:text-[180px] 2xl:text-[220px] leading-none text-center font-medium whitespace-nowrap">
+                    Prime Alliance
+                </h1>
             </div>
-            <div class="w-full flex items-center justify-between pt-[32px] border-t border-[#E4E7EC]">
-                <div class="text-center">
-                    <p class="text-[15px] text-[#ffffff]">
-                        © 2024 Prime Alliance. All rights reserved.
-                    </p>
-                </div>
-                <div class="flex items-center gap-[20px]">
 
-                    <a href="#" class="text-[15px] text-[#ffffff] hover:text-[#00A651] transition duration-300">
-                        Facebook
-                    </a>
-
-                    <a href="#" class="text-[15px] text-[#ffffff] hover:text-[#00A651] transition duration-300">
-                        Instagram
-                    </a>
-
-                    <a href="#" class="text-[15px] text-[#ffffff] hover:text-[#00A651] transition duration-300">
-                        LinkedIn
-                    </a>
-
-                    <a href="#" class="text-[15px] text-[#ffffff] hover:text-[#00A651] transition duration-300">
-                        WhatsApp
-                    </a>
-
+            <!-- Bottom bar -->
+            <div
+                class="w-full flex flex-col sm:flex-row items-center justify-between gap-3 pt-[32px] border-t border-white/20">
+                <p class="text-[14px] text-white/70 text-center sm:text-left">
+                    © 2024 Prime Alliance. All rights reserved.
+                </p>
+                <div class="flex flex-wrap items-center justify-center gap-4 lg:gap-[20px]">
+                    <a href="#"
+                        class="text-[14px] text-white/80 hover:text-[#00A651] transition duration-300">Facebook</a>
+                    <a href="#"
+                        class="text-[14px] text-white/80 hover:text-[#00A651] transition duration-300">Instagram</a>
+                    <a href="#"
+                        class="text-[14px] text-white/80 hover:text-[#00A651] transition duration-300">LinkedIn</a>
+                    <a href="#"
+                        class="text-[14px] text-white/80 hover:text-[#00A651] transition duration-300">WhatsApp</a>
                 </div>
             </div>
         </div>
     </footer>
+
     <script>
         AOS.init();
+
+        // Mobile menu toggle
+        const toggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const bar1 = document.getElementById('bar1');
+        const bar2 = document.getElementById('bar2');
+        const bar3 = document.getElementById('bar3');
+
+        toggle.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+
+            // Animate hamburger to X
+            if (!isOpen) {
+                bar1.style.transform = 'translateY(7px) rotate(45deg)';
+                bar2.style.opacity = '0';
+                bar3.style.transform = 'translateY(-7px) rotate(-45deg)';
+            } else {
+                bar1.style.transform = '';
+                bar2.style.opacity = '';
+                bar3.style.transform = '';
+            }
+        });
     </script>
 </body>
 

@@ -9,29 +9,44 @@
 </head>
 
 <body>
+    <!-- HEADER -->
     <header
-        class="fixed top-[24px] left-[128px] right-[128px] bg-white shadow-md rounded-[16px] px-[32px] py-[16px] z-50">
+        class="fixed top-0 sm:top-[16px] left-0 right-0 sm:left-4 sm:right-4 lg:left-[64px] lg:right-[64px] xl:left-[128px] xl:right-[128px] bg-white shadow-md sm:rounded-[16px] px-5 sm:px-[32px] py-[14px] sm:py-[16px] z-50">
         <nav class="flex justify-between items-center">
-            <!-- lOGO -->
-            <a href="" class="">Prime Alliance</a>
-            <ul class="flex items-center gap-8">
-                <li>
-                    <a href="" class="">Home</a>
-                </li>
-                <li>
-                    <a href="about.html" class="">About</a>
-                </li>
-                <li>
-                    <a href="service.html" class="">Services</a>
-                </li>
-                <li>
-                    <a href="" class="">Home</a>
-                </li>
+            <!-- LOGO -->
+            <a href="index.html" class="font-bold text-[18px]">Prime Alliance</a>
+
+            <!-- Desktop Nav -->
+            <ul class="hidden md:flex items-center gap-8">
+                <li><a href="index.html" class="">Home</a></li>
+                <li><a href="about.html" class="">About</a></li>
+                <li><a href="service.html" class="">Services</a></li>
+                <li><a href="" class="">Projects</a></li>
             </ul>
-            <a href="" class="">Contact us</a>
+
+            <a href="" class="hidden md:inline-block">Contact us</a>
+
+            <!-- Mobile Hamburger -->
+            <button id="menu-toggle" class="md:hidden flex flex-col gap-[5px] p-1" aria-label="Toggle menu">
+                <span class="block w-6 h-[2px] bg-black transition-all duration-300" id="bar1"></span>
+                <span class="block w-6 h-[2px] bg-black transition-all duration-300" id="bar2"></span>
+                <span class="block w-6 h-[2px] bg-black transition-all duration-300" id="bar3"></span>
+            </button>
         </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden flex-col gap-4 pt-4 pb-2 border-t border-gray-100 mt-3">
+            <a href="index.html" class="text-[15px] py-1">Home</a>
+            <a href="about.html" class="text-[15px] py-1">About</a>
+            <a href="service.html" class="text-[15px] py-1">Services</a>
+            <a href="" class="text-[15px] py-1">Projects</a>
+            <a href="" class="text-[15px] py-1 font-medium">Contact us</a>
+        </div>
     </header>
-    <section class="min-h-[25%] h-[25%] relative flex items-center justify-center px-[128px] py-[96px]">
+
+    <!-- HERO BANNER SECTION -->
+    <section
+        class="min-h-[40vh] sm:min-h-[35vh] relative flex items-center justify-center px-5 py-16 sm:px-12 sm:py-20 md:px-16 lg:px-[128px] lg:py-[96px]">
         <div class="absolute h-full w-full inset-0 bg-gradient-to-b from-black/20 via-black/80 to-black/90 z-10"></div>
         <!-- Background image -->
         <div class="absolute inset-0 z-0">
@@ -39,181 +54,298 @@
         </div>
         <!-- Hero content -->
         <div class="relative z-20 flex flex-col gap-[28px] text-white">
-            <h1 class="text-[64px] text-center leading-[72px] tracking-[-1.5px]">Beyond Speed. Beyond Delivery.</h1>
+            <h1
+                class="text-[36px] leading-[44px] sm:text-[48px] sm:leading-[56px] lg:text-[64px] lg:leading-[72px] text-center tracking-[-1.5px]">
+                Beyond Speed. Beyond Delivery.
+            </h1>
         </div>
     </section>
-    <section class="px-[128px] py-[120px] bg-[#F8FAF9]">
+    <!-- VISION & MISSION SECTION -->
+    <section class="px-5 py-12 sm:px-12 sm:py-16 md:px-16 md:py-20 lg:px-[128px] lg:py-[96px] bg-[#F8FAF9]">
+
+        <!-- Section Header -->
+        <div class="text-center flex flex-col gap-3 sm:gap-4 mb-12 sm:mb-16 lg:mb-[72px]">
+            <p class="text-[14px] sm:text-[15px] font-semibold tracking-[2px] uppercase text-[#00A651]">
+                Who We Are
+            </p>
+            <h2
+                class="text-[32px] leading-[38px] sm:text-[44px] sm:leading-[50px] lg:text-[56px] lg:leading-[62px] tracking-[-1px] text-[#003C13]">
+                Purpose & Direction
+            </h2>
+            <p class="text-[15px] leading-[26px] text-gray-500 max-w-[560px] mx-auto">
+                Guided by clear values and a long-term vision, every solution we deliver is rooted in integrity and
+                impact.
+            </p>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-10 lg:mb-12">
+
+            <!-- Vision Card -->
+            <div
+                class="relative bg-[#003C13] rounded-[20px] overflow-hidden px-8 py-10 sm:px-10 sm:py-12 flex flex-col gap-6">
+                <!-- Background pattern circles -->
+                <div class="absolute top-[-40px] right-[-40px] w-[200px] h-[200px] rounded-full border border-white/10">
+                </div>
+                <div class="absolute top-[-10px] right-[-10px] w-[120px] h-[120px] rounded-full border border-white/10">
+                </div>
+
+                <!-- Icon -->
+                <div class="w-[52px] h-[52px] rounded-[14px] bg-[#00A651]/20 flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6 text-[#00A651]" fill="none" stroke="currentColor" stroke-width="1.8"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.964-7.178z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </div>
+
+                <div class="flex flex-col gap-3 relative z-10">
+                    <h3 class="text-[22px] sm:text-[26px] leading-[30px] font-medium text-white tracking-[-0.5px]">Our
+                        Vision</h3>
+                    <p class="text-[15px] sm:text-[16px] leading-[28px] text-white/70">
+                        To be the leading integrated solutions provider in East Africa — recognized for excellence in
+                        supply chain management, logistics, technology, and consultancy that drives sustainable
+                        industrial growth.
+                    </p>
+                </div>
+
+                <!-- Bottom accent line -->
+                <div class="absolute bottom-0 left-0 right-0 h-[3px] bg-[#00A651]"></div>
+            </div>
+
+            <!-- Mission Card -->
+            <div
+                class="relative bg-white rounded-[20px] overflow-hidden border border-gray-100 px-8 py-10 sm:px-10 sm:py-12 flex flex-col gap-6">
+                <!-- Background pattern circles -->
+                <div
+                    class="absolute top-[-40px] right-[-40px] w-[200px] h-[200px] rounded-full border border-[#003C13]/5">
+                </div>
+                <div
+                    class="absolute top-[-10px] right-[-10px] w-[120px] h-[120px] rounded-full border border-[#003C13]/5">
+                </div>
+
+                <!-- Icon -->
+                <div class="w-[52px] h-[52px] rounded-[14px] bg-[#003C13]/8 flex items-center justify-center shrink-0">
+                    <svg class="w-6 h-6 text-[#003C13]" fill="none" stroke="currentColor" stroke-width="1.8"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3 3v1.5M3 21v-6m0 0l2.77-.693a9 9 0 016.208.682l.108.054a9 9 0 006.086.71l3.114-.732a48.524 48.524 0 01-.005-10.499l-3.11.732a9 9 0 01-6.085-.711l-.108-.054a9 9 0 00-6.208-.682L3 4.5M3 15V4.5" />
+                    </svg>
+                </div>
+
+                <div class="flex flex-col gap-3 relative z-10">
+                    <h3 class="text-[22px] sm:text-[26px] leading-[30px] font-medium text-[#003C13] tracking-[-0.5px]">
+                        Our Mission</h3>
+                    <p class="text-[15px] sm:text-[16px] leading-[28px] text-gray-500">
+                        To deliver reliable, efficient, and cost-effective supply, logistics, ICT, and consultancy
+                        services that empower businesses and government institutions to achieve their goals across
+                        multiple sectors.
+                    </p>
+                </div>
+
+                <!-- Bottom accent line -->
+                <div class="absolute bottom-0 left-0 right-0 h-[3px] bg-[#003C13]"></div>
+            </div>
+
+        </div>
+
+        <!-- Values Row -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+
+            <!-- Value 1 -->
+            <div class="flex flex-col gap-3 bg-white rounded-[16px] border border-gray-100 px-6 py-6">
+                <div class="w-[40px] h-[40px] rounded-[10px] bg-[#00A651]/10 flex items-center justify-center shrink-0">
+                    <svg class="w-5 h-5 text-[#00A651]" fill="none" stroke="currentColor" stroke-width="1.8"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                    </svg>
+                </div>
+                <h4 class="text-[16px] font-semibold text-[#003C13]">Integrity</h4>
+                <p class="text-[14px] leading-[22px] text-gray-500">We uphold honesty and transparency in every
+                    engagement and partnership.</p>
+            </div>
+
+            <!-- Value 2 -->
+            <div class="flex flex-col gap-3 bg-white rounded-[16px] border border-gray-100 px-6 py-6">
+                <div class="w-[40px] h-[40px] rounded-[10px] bg-[#00A651]/10 flex items-center justify-center shrink-0">
+                    <svg class="w-5 h-5 text-[#00A651]" fill="none" stroke="currentColor" stroke-width="1.8"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+                    </svg>
+                </div>
+                <h4 class="text-[16px] font-semibold text-[#003C13]">Excellence</h4>
+                <p class="text-[14px] leading-[22px] text-gray-500">We set the highest standards in service delivery,
+                    reliability, and professionalism.</p>
+            </div>
+
+            <!-- Value 3 -->
+            <div class="flex flex-col gap-3 bg-white rounded-[16px] border border-gray-100 px-6 py-6">
+                <div class="w-[40px] h-[40px] rounded-[10px] bg-[#00A651]/10 flex items-center justify-center shrink-0">
+                    <svg class="w-5 h-5 text-[#00A651]" fill="none" stroke="currentColor" stroke-width="1.8"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                    </svg>
+                </div>
+                <h4 class="text-[16px] font-semibold text-[#003C13]">Partnership</h4>
+                <p class="text-[14px] leading-[22px] text-gray-500">We build long-term relationships rooted in mutual
+                    trust and shared success.</p>
+            </div>
+
+            <!-- Value 4 -->
+            <div class="flex flex-col gap-3 bg-white rounded-[16px] border border-gray-100 px-6 py-6">
+                <div class="w-[40px] h-[40px] rounded-[10px] bg-[#00A651]/10 flex items-center justify-center shrink-0">
+                    <svg class="w-5 h-5 text-[#00A651]" fill="none" stroke="currentColor" stroke-width="1.8"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+                    </svg>
+                </div>
+                <h4 class="text-[16px] font-semibold text-[#003C13]">Innovation</h4>
+                <p class="text-[14px] leading-[22px] text-gray-500">We embrace modern solutions and creative thinking to
+                    solve complex challenges.</p>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- TEAM SECTION -->
+    <section class="px-5 py-12 sm:px-12 sm:py-16 md:px-16 md:py-20 lg:px-[128px] lg:py-[120px] bg-[#F8FAF9]">
 
         <!-- SECTION HEADER -->
-        <div class="text-center flex flex-col gap-[24px] mb-[80px]">
-            <p class=" text-[16px] font-semibold tracking-[2px]">
+        <div class="text-center flex flex-col gap-3 sm:gap-[24px] mb-10 sm:mb-14 lg:mb-[80px]">
+            <p class="text-[14px] sm:text-[16px] font-semibold tracking-[2px]">
                 Our Team
             </p>
-
-            <h2 class="text-[60px] leading-[64px] tracking-[-1px]">
+            <h2
+                class="text-[32px] leading-[38px] sm:text-[44px] sm:leading-[50px] lg:text-[60px] lg:leading-[64px] tracking-[-1px]">
                 Meet Our Professionals
             </h2>
-
-            <p class="text-[16px] leading-[24px] text-gray-500">
+            <p class="text-[15px] leading-[24px] text-gray-500 max-w-[600px] mx-auto">
                 Our dedicated team brings together expertise in logistics, procurement,
                 ICT, construction, and consultancy to deliver reliable business solutions.
             </p>
         </div>
 
         <!-- TEAM GRID -->
-        <div class="grid grid-cols-3 gap-[32px]">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-[32px]">
 
-            <!-- CARD -->
-            <div class="flex flex-col gap-[24px]">
-
-                <!-- IMAGE -->
-                <div class="aspect-[4/5] lg:aspect-[5/4] overflow-hidden rounded-[20px]">
+            <!-- CARD 1 -->
+            <div class="flex flex-col gap-5 lg:gap-[24px]">
+                <div class="aspect-[4/3] sm:aspect-[4/5] lg:aspect-[5/4] overflow-hidden rounded-[20px]">
                     <img src="assets/images/IMG-20260511-WA0049.jpg" alt=""
                         class="h-full w-full object-cover hover:scale-105 transition duration-700">
                 </div>
-
-                <!-- CONTENT -->
                 <div class="flex flex-col gap-[14px]">
-
-                    <!-- NAME -->
                     <h3
-                        class="text-[22px] lg:text-[30px] leading-[26px] lg:leading-[32px] tracking-[-1px] text-[#003C13] font-[500]">
+                        class="text-[20px] sm:text-[22px] lg:text-[30px] leading-[26px] lg:leading-[32px] tracking-[-1px] text-[#003C13] font-[500]">
                         Zaidan A Mussa
                     </h3>
-
-                    <!-- POSITION -->
-                    <p class="text-[#00A651] text-[16px] leading-[22px] font-medium">
+                    <p class="text-[#00A651] text-[15px] sm:text-[16px] leading-[22px] font-medium">
                         Group CEO & Managing Director
                     </p>
-
-                    <!-- DESCRIPTION -->
-                    <p class="text-[#667085] text-[16px] leading-[30px]">
+                    <p class="text-[#667085] text-[15px] sm:text-[16px] leading-[28px] sm:leading-[30px]">
                         Leads digital transformation, IT infrastructure,
                         and software solution implementation projects.
                     </p>
-
-                    <!-- CONTACT -->
                     <div class="flex flex-col gap-[6px] pt-[8px]">
                         <a href="mailto:zaidan@primealliance.com"
-                            class="text-[15px] text-[#003C13] hover:text-[#00A651] transition">
+                            class="text-[14px] sm:text-[15px] text-[#003C13] hover:text-[#00A651] transition break-all">
                             zaidan@primealliance.com
                         </a>
-
-                        <a href="tel:+255700000000" class="text-[15px] text-[#003C13] hover:text-[#00A651] transition">
+                        <a href="tel:+255700000000"
+                            class="text-[14px] sm:text-[15px] text-[#003C13] hover:text-[#00A651] transition">
                             +255 700 000 000
                         </a>
                     </div>
-
                 </div>
             </div>
-            <!-- CARD -->
-            <div class="flex flex-col gap-[24px]">
 
-                <!-- IMAGE -->
-                <div class="aspect-[4/5] lg:aspect-[5/4] overflow-hidden rounded-[20px]">
+            <!-- CARD 2 -->
+            <div class="flex flex-col gap-5 lg:gap-[24px]">
+                <div class="aspect-[4/3] sm:aspect-[4/5] lg:aspect-[5/4] overflow-hidden rounded-[20px]">
                     <img src="assets/images/1778514505799.png" alt=""
                         class="h-full w-full object-cover hover:scale-105 transition duration-700">
                 </div>
-
-                <!-- CONTENT -->
                 <div class="flex flex-col gap-[14px]">
-
-                    <!-- NAME -->
                     <h3
-                        class="text-[22px] lg:text-[30px] leading-[26px] lg:leading-[32px] tracking-[-1px] text-[#003C13] font-[500]">
+                        class="text-[20px] sm:text-[22px] lg:text-[30px] leading-[26px] lg:leading-[32px] tracking-[-1px] text-[#003C13] font-[500]">
                         Raban B. Selestine
                     </h3>
-
-                    <!-- POSITION -->
-                    <p class="text-[#00A651] text-[16px] leading-[22px] font-medium">
+                    <p class="text-[#00A651] text-[15px] sm:text-[16px] leading-[22px] font-medium">
                         Group Chief Operational Officer
                     </p>
-
-                    <!-- DESCRIPTION -->
-                    <p class="text-[#667085] text-[16px] leading-[30px]">
+                    <p class="text-[#667085] text-[15px] sm:text-[16px] leading-[28px] sm:leading-[30px]">
                         Oversees logistics operations, procurement management,
                         and project coordination across multiple industries.
                     </p>
-
-                    <!-- CONTACT -->
                     <div class="flex flex-col gap-[6px] pt-[8px]">
                         <a href="mailto:raban@primealliance.com"
-                            class="text-[15px] text-[#003C13] hover:text-[#00A651] transition">
+                            class="text-[14px] sm:text-[15px] text-[#003C13] hover:text-[#00A651] transition break-all">
                             raban@primealliance.com
                         </a>
-
-                        <a href="tel:+255700000000" class="text-[15px] text-[#003C13] hover:text-[#00A651] transition">
+                        <a href="tel:+255700000000"
+                            class="text-[14px] sm:text-[15px] text-[#003C13] hover:text-[#00A651] transition">
                             +255 700 000 000
                         </a>
                     </div>
-
                 </div>
             </div>
 
-
-            <!-- CARD -->
-            <div class="flex flex-col gap-[24px]">
-
-                <!-- IMAGE -->
-                <div class="aspect-[4/5] lg:aspect-[5/4] overflow-hidden rounded-[20px]">
+            <!-- CARD 3 -->
+            <div class="flex flex-col gap-5 lg:gap-[24px]">
+                <div class="aspect-[4/3] sm:aspect-[4/5] lg:aspect-[5/4] overflow-hidden rounded-[20px]">
                     <img src="assets/images/1778530289072.png" alt=""
                         class="h-full w-full object-cover hover:scale-105 transition duration-700">
                 </div>
-
-                <!-- CONTENT -->
                 <div class="flex flex-col gap-[14px]">
-
-                    <!-- NAME -->
                     <h3
-                        class="text-[22px] lg:text-[30px] leading-[26px] lg:leading-[32px] tracking-[-1px] text-[#003C13] font-[500]">
+                        class="text-[20px] sm:text-[22px] lg:text-[30px] leading-[26px] lg:leading-[32px] tracking-[-1px] text-[#003C13] font-[500]">
                         Collins S. Badi
                     </h3>
-
-                    <!-- POSITION -->
-                    <p class="text-[#00A651] text-[16px] leading-[22px] font-medium">
+                    <p class="text-[#00A651] text-[15px] sm:text-[16px] leading-[22px] font-medium">
                         Group Chief Financial Officer
                     </p>
-
-                    <!-- DESCRIPTION -->
-                    <p class="text-[#667085] text-[16px] leading-[30px]">
+                    <p class="text-[#667085] text-[15px] sm:text-[16px] leading-[28px] sm:leading-[30px]">
                         Manages supplier sourcing, tendering processes,
                         and procurement strategy for client projects.
                     </p>
-
-                    <!-- CONTACT -->
                     <div class="flex flex-col gap-[6px] pt-[8px]">
                         <a href="mailto:collins@primealliance.com"
-                            class="text-[15px] text-[#003C13] hover:text-[#00A651] transition">
+                            class="text-[14px] sm:text-[15px] text-[#003C13] hover:text-[#00A651] transition break-all">
                             collins@primealliance.com
                         </a>
-
-                        <a href="tel:+255700000000" class="text-[15px] text-[#003C13] hover:text-[#00A651] transition">
+                        <a href="tel:+255700000000"
+                            class="text-[14px] sm:text-[15px] text-[#003C13] hover:text-[#00A651] transition">
                             +255 700 000 000
                         </a>
                     </div>
-
                 </div>
             </div>
 
         </div>
     </section>
-    <footer class="min-h-screen h-screen relative px-[128px] py-[96px]">
+
+    <!-- FOOTER -->
+    <footer class="relative px-5 py-12 sm:px-12 sm:py-16 md:px-16 md:py-20 lg:px-[128px] lg:py-[96px]">
         <!-- Footer overlay -->
         <div class="absolute h-full w-full inset-0 bg-gradient-to-b from-black/70 via-black/80 to-black/90 z-10"></div>
         <!-- Footer background -->
         <div class="absolute inset-0 z-0">
-            <img src="assets/images/IMG-20260506-WA0056.jpg" class="w-full h-full object-cover" alt="Hero background">
+            <img src="assets/images/IMG-20260506-WA0056.jpg" class="w-full h-full object-cover" alt="Footer background">
         </div>
         <!-- Footer content -->
-        <div class="relative z-20 flex flex-col gap-[28px] text-white">
-            <div class="grid grid-cols-4 gap-[48px] pt-[48px] pb-[60px]">
+        <div class="relative z-20 flex flex-col gap-6 lg:gap-[28px] text-white">
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-[48px] pt-8 pb-10 lg:pt-[48px] lg:pb-[60px]">
 
                 <!-- LOGO + DESCRIPTION -->
-                <div class="flex flex-col gap-[16px]">
-                    <h2 class="text-[20px] font-bold text-[#ffffff]">
-                        Prime Alliance
-                    </h2>
-                    <p class="text-[14px] leading-[24px] text-[#ffffff]">
+                <div class="col-span-1 sm:col-span-2 lg:col-span-1 flex flex-col gap-[16px]">
+                    <h2 class="text-[20px] font-bold">Prime Alliance</h2>
+                    <p class="text-[14px] leading-[24px] text-white/80 max-w-[280px]">
                         Integrated supply, logistics, ICT, construction, and consultancy services
                         delivering reliable business solutions across industries.
                     </p>
@@ -221,69 +353,89 @@
 
                 <!-- COMPANY -->
                 <div class="flex flex-col gap-[12px]">
-                    <h3 class="text-[16px] font-semibold text-[#ffffff]">Company</h3>
-
-                    <a href="#" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">About Us</a>
-                    <a href="#" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">Services</a>
-                    <a href="#" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">Solutions</a>
-                    <a href="#" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">Careers</a>
+                    <h3 class="text-[16px] font-semibold mb-1">Company</h3>
+                    <a href="about.html" class="text-[14px] text-white/80 hover:text-white transition-colors">About
+                        Us</a>
+                    <a href="service.html"
+                        class="text-[14px] text-white/80 hover:text-white transition-colors">Services</a>
+                    <a href="#" class="text-[14px] text-white/80 hover:text-white transition-colors">Solutions</a>
+                    <a href="#" class="text-[14px] text-white/80 hover:text-white transition-colors">Careers</a>
                 </div>
 
                 <!-- SERVICES -->
                 <div class="flex flex-col gap-[12px]">
-                    <h3 class="text-[16px] font-semibold text-[#ffffff]">Services</h3>
-
-                    <a href="#" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">Logistics</a>
-                    <a href="#" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">Construction Supply</a>
-                    <a href="#" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">ICT Solutions</a>
-                    <a href="#" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">Consultancy</a>
+                    <h3 class="text-[16px] font-semibold mb-1">Services</h3>
+                    <a href="#" class="text-[14px] text-white/80 hover:text-white transition-colors">Logistics</a>
+                    <a href="#" class="text-[14px] text-white/80 hover:text-white transition-colors">Construction
+                        Supply</a>
+                    <a href="#" class="text-[14px] text-white/80 hover:text-white transition-colors">ICT Solutions</a>
+                    <a href="#" class="text-[14px] text-white/80 hover:text-white transition-colors">Consultancy</a>
                 </div>
 
                 <!-- CONTACT -->
                 <div class="flex flex-col gap-[12px]">
-                    <h3 class="text-[16px] font-semibold text-[#ffffff]">Contact</h3>
-
-                    <p class="text-[14px] text-[#ffffff]">Dar es Salaam, Tanzania</p>
-                    <a href="tel:+255700000000" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">
-                        +255 700 000 000
-                    </a>
-                    <a href="mailto:info@primealliance.com" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">
-                        info@primealliance.com
-                    </a>
+                    <h3 class="text-[16px] font-semibold mb-1">Contact</h3>
+                    <p class="text-[14px] text-white/80">Dar es Salaam, Tanzania</p>
+                    <a href="tel:+255700000000"
+                        class="text-[14px] text-white/80 hover:text-white transition-colors">+255 700 000 000</a>
+                    <a href="mailto:info@primealliance.com"
+                        class="text-[14px] text-white/80 hover:text-white transition-colors break-all">info@primealliance.com</a>
                 </div>
 
             </div>
-            <div>
-                <h1 class="text-[220px] text-center font-medium">Prime Alliance</h1>
+
+            <!-- Big wordmark -->
+            <div class="overflow-hidden">
+                <h1
+                    class="text-[13vw] sm:text-[12vw] lg:text-[11vw] xl:text-[180px] 2xl:text-[220px] leading-none text-center font-medium whitespace-nowrap">
+                    Prime Alliance
+                </h1>
             </div>
-            <div class="w-full flex items-center justify-between pt-[32px] border-t border-[#E4E7EC]">
-                <div class="text-center">
-                    <p class="text-[15px] text-[#ffffff]">
-                        © 2024 Prime Alliance. All rights reserved.
-                    </p>
-                </div>
-                <div class="flex items-center gap-[20px]">
 
-                    <a href="#" class="text-[15px] text-[#ffffff] hover:text-[#00A651] transition duration-300">
-                        Facebook
-                    </a>
-
-                    <a href="#" class="text-[15px] text-[#ffffff] hover:text-[#00A651] transition duration-300">
-                        Instagram
-                    </a>
-
-                    <a href="#" class="text-[15px] text-[#ffffff] hover:text-[#00A651] transition duration-300">
-                        LinkedIn
-                    </a>
-
-                    <a href="#" class="text-[15px] text-[#ffffff] hover:text-[#00A651] transition duration-300">
-                        WhatsApp
-                    </a>
-
+            <!-- Bottom bar -->
+            <div
+                class="w-full flex flex-col sm:flex-row items-center justify-between gap-3 pt-[32px] border-t border-white/20">
+                <p class="text-[14px] text-white/70 text-center sm:text-left">
+                    © 2024 Prime Alliance. All rights reserved.
+                </p>
+                <div class="flex flex-wrap items-center justify-center gap-4 lg:gap-[20px]">
+                    <a href="#"
+                        class="text-[14px] text-white/80 hover:text-[#00A651] transition duration-300">Facebook</a>
+                    <a href="#"
+                        class="text-[14px] text-white/80 hover:text-[#00A651] transition duration-300">Instagram</a>
+                    <a href="#"
+                        class="text-[14px] text-white/80 hover:text-[#00A651] transition duration-300">LinkedIn</a>
+                    <a href="#"
+                        class="text-[14px] text-white/80 hover:text-[#00A651] transition duration-300">WhatsApp</a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        const toggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const bar1 = document.getElementById('bar1');
+        const bar2 = document.getElementById('bar2');
+        const bar3 = document.getElementById('bar3');
+
+        toggle.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+
+            if (!isOpen) {
+                bar1.style.transform = 'translateY(7px) rotate(45deg)';
+                bar2.style.opacity = '0';
+                bar3.style.transform = 'translateY(-7px) rotate(-45deg)';
+            } else {
+                bar1.style.transform = '';
+                bar2.style.opacity = '';
+                bar3.style.transform = '';
+            }
+        });
+    </script>
 </body>
 
 </html>
