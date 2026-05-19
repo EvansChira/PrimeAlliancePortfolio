@@ -9,6 +9,38 @@
 </head>
 
 <body>
+    <!-- HEADER -->
+    <header
+        class="fixed top-0 sm:top-[16px] left-0 right-0 sm:left-4 sm:right-4 lg:left-[64px] lg:right-[64px] xl:left-[128px] xl:right-[128px] bg-white shadow-md sm:rounded-[16px] px-5 sm:px-[32px] py-[14px] sm:py-[16px] z-50">
+        <nav class="flex justify-between items-center">
+            <!-- LOGO -->
+            <a href="" class="font-bold text-[18px]">Prime Alliance</a>
+
+            <!-- Desktop Nav -->
+            <ul class="hidden md:flex items-center gap-8">
+                <li><a href="index.html" class="">Home</a></li>
+                <li><a href="about.html" class="">About</a></li>
+                <li><a href="service.html" class="">Services</a></li>
+            </ul>
+
+            <a href="contact.html" class="hidden md:inline-block">Contact us</a>
+
+            <!-- Mobile Hamburger -->
+            <button id="menu-toggle" class="md:hidden flex flex-col gap-[5px] p-1" aria-label="Toggle menu">
+                <span class="block w-6 h-[2px] bg-black transition-all duration-300" id="bar1"></span>
+                <span class="block w-6 h-[2px] bg-black transition-all duration-300" id="bar2"></span>
+                <span class="block w-6 h-[2px] bg-black transition-all duration-300" id="bar3"></span>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden flex-col gap-4 pt-4 pb-2 border-t border-gray-100 mt-3">
+            <a href="index.html" class="text-[15px] py-1">Home</a>
+            <a href="about.html" class="text-[15px] py-1">About</a>
+            <a href="service.html" class="text-[15px] py-1">Services</a>
+            <a href="contact.html" class="text-[15px] py-1 font-medium">Contact us</a>
+        </div>
+    </header>
     <section class="min-h-[50%] h-[50%] relative flex items-center justify-center px-[128px] py-[96px]">
         <div class="absolute h-full w-full inset-0 bg-gradient-to-b from-black/20 via-black/80 to-black/90 z-10"></div>
         <!-- Background image -->
@@ -92,12 +124,6 @@
             </div>
         </div>
     </section>
-    <section class="h-screen w-screen"><iframe class="h-full w-full" width="1205" height="678"
-            src="https://www.youtube.com/embed/Nkx2rwlDpFc" title="No One Knows Asia Like We Do | TVC 60&#39;&#39;"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </section>
     <!-- CONTACT SECTION -->
     <section class="px-5 py-12 sm:px-12 sm:py-16 md:px-16 md:py-20 lg:px-[128px] lg:py-[96px] bg-[#F8FAF9]">
         <div class="flex flex-col lg:flex-row gap-10 lg:gap-[80px]">
@@ -107,11 +133,11 @@
 
                 <!-- Header -->
                 <div class="flex flex-col gap-4">
-                    <p class="text-[14px] font-semibold tracking-[2px] uppercase text-[#00A651]">
+                    <p class="text-[14px] font-semibold tracking-[2px] text-[#00A651]">
                         Get In Touch
                     </p>
                     <h2
-                        class="text-[32px] leading-[38px] sm:text-[42px] sm:leading-[48px] lg:text-[48px] lg:leading-[54px] tracking-[-1px] text-[#003C13]">
+                        class="text-[32px] leading-[38px] sm:text-[44px] sm:leading-[50px] lg:text-[60px] lg:leading-[64px] tracking-[-1px]">
                         We will be in touch shortly
                     </h2>
                     <p class="text-[15px] sm:text-[16px] leading-[28px] text-gray-500">
@@ -150,7 +176,7 @@
                             </svg>
                         </div>
                         <div class="flex flex-col gap-[2px]">
-                            <p class="text-[13px] font-semibold text-[#003C13] uppercase tracking-[1px]">Phone</p>
+                            <p class="text-[13px] font-semibold text-[#003C13] tracking-[1px]">Phone</p>
                             <a href="tel:+255700000000"
                                 class="text-[15px] text-gray-500 hover:text-[#00A651] transition">+255 700 000 000</a>
                         </div>
@@ -166,7 +192,7 @@
                             </svg>
                         </div>
                         <div class="flex flex-col gap-[2px]">
-                            <p class="text-[13px] font-semibold text-[#003C13] uppercase tracking-[1px]">Email</p>
+                            <p class="text-[13px] font-semibold text-[#003C13] tracking-[1px]">Email</p>
                             <a href="mailto:info@primealliance.com"
                                 class="text-[15px] text-gray-500 hover:text-[#00A651] transition break-all">info@primealliance.com</a>
                         </div>
@@ -176,7 +202,7 @@
 
                 <!-- Social Media -->
                 <div class="flex flex-col gap-4">
-                    <p class="text-[13px] font-semibold text-[#003C13] uppercase tracking-[1px]">Follow us</p>
+                    <p class="text-[13px] font-semibold text-[#003C13] tracking-[1px]">Follow us</p>
                     <div class="flex items-center gap-3">
 
                         <a href="#"
@@ -285,23 +311,22 @@
 
         </div>
     </section>
-    <footer class="min-h-screen h-screen relative px-[128px] py-[96px]">
+    <footer class="relative px-5 py-12 sm:px-12 sm:py-16 md:px-16 md:py-20 lg:px-[128px] lg:py-[96px]">
         <!-- Footer overlay -->
         <div class="absolute h-full w-full inset-0 bg-gradient-to-b from-black/70 via-black/80 to-black/90 z-10"></div>
         <!-- Footer background -->
         <div class="absolute inset-0 z-0">
-            <img src="assets/images/IMG-20260506-WA0056.jpg" class="w-full h-full object-cover" alt="Hero background">
+            <img src="assets/images/IMG-20260506-WA0056.jpg" class="w-full h-full object-cover" alt="Footer background">
         </div>
         <!-- Footer content -->
-        <div class="relative z-20 flex flex-col gap-[28px] text-white">
-            <div class="grid grid-cols-4 gap-[48px] pt-[48px] pb-[60px]">
+        <div class="relative z-20 flex flex-col gap-6 lg:gap-[28px] text-white">
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-[48px] pt-8 pb-10 lg:pt-[48px] lg:pb-[60px]">
 
                 <!-- LOGO + DESCRIPTION -->
-                <div class="flex flex-col gap-[16px]">
-                    <h2 class="text-[20px] font-bold text-[#ffffff]">
-                        Prime Alliance
-                    </h2>
-                    <p class="text-[14px] leading-[24px] text-[#ffffff]">
+                <div class="col-span-1 sm:col-span-2 lg:col-span-1 flex flex-col gap-[16px]">
+                    <h2 class="text-[20px] font-bold">Prime Alliance</h2>
+                    <p class="text-[14px] leading-[24px] text-white/80 max-w-[280px]">
                         Integrated supply, logistics, ICT, construction, and consultancy services
                         delivering reliable business solutions across industries.
                     </p>
@@ -309,69 +334,65 @@
 
                 <!-- COMPANY -->
                 <div class="flex flex-col gap-[12px]">
-                    <h3 class="text-[16px] font-semibold text-[#ffffff]">Company</h3>
-
-                    <a href="#" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">About Us</a>
-                    <a href="#" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">Services</a>
-                    <a href="#" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">Solutions</a>
-                    <a href="#" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">Careers</a>
+                    <h3 class="text-[16px] font-semibold mb-1">Company</h3>
+                    <a href="about.html" class="text-[14px] text-white/80 hover:text-white transition-colors">About
+                        Us</a>
+                    <a href="service.html"
+                        class="text-[14px] text-white/80 hover:text-white transition-colors">Services</a>
+                    <a href="" class="text-[14px] text-white/80 hover:text-white transition-colors">Solutions</a>
+                    <a href="#" class="text-[14px] text-white/80 hover:text-white transition-colors">Careers</a>
                 </div>
 
                 <!-- SERVICES -->
                 <div class="flex flex-col gap-[12px]">
-                    <h3 class="text-[16px] font-semibold text-[#ffffff]">Services</h3>
-
-                    <a href="#" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">Logistics</a>
-                    <a href="#" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">Construction Supply</a>
-                    <a href="#" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">ICT Solutions</a>
-                    <a href="#" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">Consultancy</a>
+                    <h3 class="text-[16px] font-semibold mb-1">Services</h3>
+                    <a href="#" class="text-[14px] text-white/80 hover:text-white transition-colors">Logistics</a>
+                    <a href="#" class="text-[14px] text-white/80 hover:text-white transition-colors">Construction
+                        Supply</a>
+                    <a href="#" class="text-[14px] text-white/80 hover:text-white transition-colors">ICT Solutions</a>
+                    <a href="#" class="text-[14px] text-white/80 hover:text-white transition-colors">Consultancy</a>
                 </div>
 
                 <!-- CONTACT -->
                 <div class="flex flex-col gap-[12px]">
-                    <h3 class="text-[16px] font-semibold text-[#ffffff]">Contact</h3>
-
-                    <p class="text-[14px] text-[#ffffff]">Dar es Salaam, Tanzania</p>
-                    <a href="tel:+255700000000" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">
-                        +255 700 000 000
-                    </a>
-                    <a href="mailto:info@primealliance.com" class="text-[14px] text-[#ffffff] hover:text-[#f2f2f2]">
-                        info@primealliance.com
-                    </a>
+                    <h3 class="text-[16px] font-semibold mb-1">Contact</h3>
+                    <p class="text-[14px] text-white/80">Dar es Salaam, Tanzania</p>
+                    <a href="tel:+255700000000"
+                        class="text-[14px] text-white/80 hover:text-white transition-colors">+255 700 000 000</a>
+                    <a href="mailto:info@primealliance.com"
+                        class="text-[14px] text-white/80 hover:text-white transition-colors break-all">info@primealliance.com</a>
                 </div>
 
             </div>
-            <div>
-                <h1 class="text-[220px] text-center font-medium">Prime Alliance</h1>
+
+            <!-- Big wordmark -->
+            <div class="overflow-hidden">
+                <h1
+                    class="text-[13vw] sm:text-[12vw] lg:text-[11vw] xl:text-[180px] 2xl:text-[220px] leading-none text-center font-medium whitespace-nowrap">
+                    Prime Alliance
+                </h1>
             </div>
-            <div class="w-full flex items-center justify-between pt-[32px] border-t border-[#E4E7EC]">
-                <div class="text-center">
-                    <p class="text-[15px] text-[#ffffff]">
-                        © 2024 Prime Alliance. All rights reserved.
-                    </p>
-                </div>
-                <div class="flex items-center gap-[20px]">
 
-                    <a href="#" class="text-[15px] text-[#ffffff] hover:text-[#00A651] transition duration-300">
-                        Facebook
-                    </a>
-
-                    <a href="#" class="text-[15px] text-[#ffffff] hover:text-[#00A651] transition duration-300">
-                        Instagram
-                    </a>
-
-                    <a href="#" class="text-[15px] text-[#ffffff] hover:text-[#00A651] transition duration-300">
-                        LinkedIn
-                    </a>
-
-                    <a href="#" class="text-[15px] text-[#ffffff] hover:text-[#00A651] transition duration-300">
-                        WhatsApp
-                    </a>
-
+            <!-- Bottom bar -->
+            <div
+                class="w-full flex flex-col sm:flex-row items-center justify-between gap-3 pt-[32px] border-t border-white/20">
+                <p class="text-[14px] text-white/70 text-center sm:text-left">
+                    © 2024 Prime Alliance. All rights reserved.
+                </p>
+                <div class="flex flex-wrap items-center justify-center gap-4 lg:gap-[20px]">
+                    <a href="#"
+                        class="text-[14px] text-white/80 hover:text-[#00A651] transition duration-300">Facebook</a>
+                    <a href="#"
+                        class="text-[14px] text-white/80 hover:text-[#00A651] transition duration-300">Instagram</a>
+                    <a href="#"
+                        class="text-[14px] text-white/80 hover:text-[#00A651] transition duration-300">LinkedIn</a>
+                    <a href="#"
+                        class="text-[14px] text-white/80 hover:text-[#00A651] transition duration-300">WhatsApp</a>
                 </div>
             </div>
         </div>
     </footer>
+
 </body>
 
 </html>
