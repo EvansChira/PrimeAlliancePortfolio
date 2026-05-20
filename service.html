@@ -14,16 +14,25 @@
         class="fixed top-0 sm:top-[16px] left-0 right-0 sm:left-4 sm:right-4 lg:left-[64px] lg:right-[64px] xl:left-[128px] xl:right-[128px] bg-white shadow-md sm:rounded-[16px] px-5 sm:px-[32px] py-[14px] sm:py-[16px] z-50">
         <nav class="flex justify-between items-center">
             <!-- LOGO -->
-            <a href="index.html" class="font-bold text-[18px]">Prime Alliance</a>
+            <a href="index.html" class="flex items-center gap-2.5">
+                <img src="assets/images/logo.jpeg" alt="Prime Alliance Logo" class="h-[36px] w-auto object-contain">
+                <span class="font-medium text-[16px] sm:text-[18px]">Prime Alliance Group Ltd</span>
+            </a>
 
             <!-- Desktop Nav -->
             <ul class="hidden md:flex items-center gap-8">
-                <li><a href="index.html" class="text-[16px]">Home</a></li>
-                <li><a href="about.html" class="text-[16px]">About</a></li>
-                <li><a href="service.html" class="text-[16px]">Services</a></li>
+                <li><a href="index.html" class="">Home</a></li>
+                <li><a href="about.html" class="">About</a></li>
+                <li><a href="service.html" class="">Services</a></li>
             </ul>
 
-            <a href="contact.html" class="hidden md:inline-block">Contact us</a>
+            <a href="contact.html"
+                class="hidden md:inline-flex items-center gap-2 border border-[#00A651] text-[#00A651] text-[14px] font-medium px-5 py-2.5 rounded-[10px] hover:bg-[#00A651] hover:text-white transition duration-300">
+                Get a Quote
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+            </a>
 
             <!-- Mobile Hamburger -->
             <button id="menu-toggle" class="md:hidden flex flex-col gap-[5px] p-1" aria-label="Toggle menu">
@@ -62,6 +71,9 @@
     <!-- SERVICES SECTION -->
     <section class="px-5 py-12 sm:px-12 sm:py-16 md:px-16 md:py-20 lg:px-[128px] lg:py-[96px]">
         <div class="text-center flex flex-col gap-3 sm:gap-[24px] mb-10 sm:mb-14 lg:mb-[80px]">
+            <p class="text-[14px] sm:text-[16px] font-semibold tracking-[2px]">
+                Our Services
+            </p>
             <h2
                 class="text-[32px] leading-[38px] sm:text-[44px] sm:leading-[50px] lg:text-[60px] lg:leading-[64px] tracking-[-1px]">
                 Solutions That Power Your Business
@@ -268,11 +280,11 @@
 
                 <!-- Header -->
                 <div class="flex flex-col gap-4">
-                    <p class="text-[14px] font-semibold tracking-[2px] uppercase text-[#00A651]">
+                    <p class="text-[14px] sm:text-[16px] font-semibold tracking-[2px]">
                         Why Choose Us
                     </p>
                     <h2
-                        class="text-[32px] leading-[38px] sm:text-[42px] sm:leading-[48px] lg:text-[52px] lg:leading-[58px] tracking-[-1px] text-[#003C13]">
+                        class="text-[32px] leading-[38px] sm:text-[44px] sm:leading-[50px] lg:text-[60px] lg:leading-[64px] tracking-[-1px]">
                         The Partner You Can Rely On
                     </h2>
                     <p class="text-[15px] sm:text-[16px] leading-[28px] text-gray-500">
@@ -433,7 +445,7 @@
                 <!-- COMPANY -->
                 <div class="flex flex-col gap-[12px]">
                     <h3 class="text-[16px] font-semibold mb-1">Company</h3>
-                    <a href="about.html" class="text-[14px] text-white/80 hover:text-white transition-colors">Home</a>
+                    <a href="index.html" class="text-[14px] text-white/80 hover:text-white transition-colors">Home</a>
                     <a href="about.html" class="text-[14px] text-white/80 hover:text-white transition-colors">About</a>
                     <a href="service.html"
                         class="text-[14px] text-white/80 hover:text-white transition-colors">Services</a>
@@ -471,7 +483,11 @@
                     <h3 class="text-[16px] font-semibold mb-1">Contact</h3>
                     <p class="text-[14px] text-white/80">Dar es Salaam, Tanzania</p>
                     <a href="tel:+255700000000"
-                        class="text-[14px] text-white/80 hover:text-white transition-colors">+255 700 000 000</a>
+                        class="text-[14px] text-white/80 hover:text-white transition-colors">+255 793 660 594</a>
+                    <a href="tel:+255700000000"
+                        class="text-[14px] text-white/80 hover:text-white transition-colors">+255 716 609 930</a>
+                    <a href="tel:+255700000000"
+                        class="text-[14px] text-white/80 hover:text-white transition-colors">+255 745 680 195</a>
                     <a href="mailto:info@primealliance.com"
                         class="text-[14px] text-white/80 hover:text-white transition-colors break-all">primealliancegroupltd@gmail.com</a>
                 </div>

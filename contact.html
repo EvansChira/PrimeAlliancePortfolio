@@ -14,7 +14,10 @@
         class="fixed top-0 sm:top-[16px] left-0 right-0 sm:left-4 sm:right-4 lg:left-[64px] lg:right-[64px] xl:left-[128px] xl:right-[128px] bg-white shadow-md sm:rounded-[16px] px-5 sm:px-[32px] py-[14px] sm:py-[16px] z-50">
         <nav class="flex justify-between items-center">
             <!-- LOGO -->
-            <a href="" class="font-bold text-[18px]">Prime Alliance</a>
+            <a href="index.html" class="flex items-center gap-2.5">
+                <img src="assets/images/logo.jpeg" alt="Prime Alliance Logo" class="h-[36px] w-auto object-contain">
+                <span class="font-medium text-[16px] sm:text-[18px]">Prime Alliance Group Ltd</span>
+            </a>
 
             <!-- Desktop Nav -->
             <ul class="hidden md:flex items-center gap-8">
@@ -23,7 +26,13 @@
                 <li><a href="service.html" class="">Services</a></li>
             </ul>
 
-            <a href="contact.html" class="hidden md:inline-block">Contact us</a>
+            <a href="contact.html"
+                class="hidden md:inline-flex items-center gap-2 border border-[#00A651] text-[#00A651] text-[14px] font-medium px-5 py-2.5 rounded-[10px] hover:bg-[#00A651] hover:text-white transition duration-300">
+                Get a Quote
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+            </a>
 
             <!-- Mobile Hamburger -->
             <button id="menu-toggle" class="md:hidden flex flex-col gap-[5px] p-1" aria-label="Toggle menu">
@@ -99,7 +108,8 @@
                 </div>
                 <div>
                     <h3 class="text-2xl font-semibold text-gray-900 mb-1">Call Us</h3>
-                    <p class="text-sm text-gray-500 leading-relaxed">+255 764 645 677<br>+255 756 567 654</p>
+                    <p class="text-sm text-gray-500 leading-relaxed">+255 793 660 594<br>+255 716 609 930<br>+255 745
+                        680 195</p>
                 </div>
             </div>
 
@@ -116,7 +126,7 @@
                 <div>
                     <h3 class="text-2xl font-semibold text-gray-900 mb-1">Mail Us</h3>
                     <p class="text-sm text-gray-500 leading-relaxed">
-                        marketing@kpdclearing.co.tz<br>sales@kpdclearing.co.tz</p>
+                        primealliancegroupltd@gmail.com</p>
                 </div>
             </div>
 
@@ -131,7 +141,7 @@
 
                 <!-- Header -->
                 <div class="flex flex-col gap-4">
-                    <p class="text-[14px] font-semibold tracking-[2px] text-[#00A651]">
+                    <p class="text-[14px] sm:text-[16px] font-semibold tracking-[2px]">
                         Get In Touch
                     </p>
                     <h2
@@ -159,7 +169,7 @@
                             </svg>
                         </div>
                         <div class="flex flex-col gap-[2px]">
-                            <p class="text-[13px] font-semibold text-[#003C13] uppercase tracking-[1px]">Location</p>
+                            <p class="text-[13px] font-semibold text-[#003C13] tracking-[1px]">Location</p>
                             <p class="text-[15px] text-gray-500 leading-[24px]">Dar es Salaam, Tanzania</p>
                         </div>
                     </div>
@@ -175,8 +185,17 @@
                         </div>
                         <div class="flex flex-col gap-[2px]">
                             <p class="text-[13px] font-semibold text-[#003C13] tracking-[1px]">Phone</p>
-                            <a href="tel:+255700000000"
-                                class="text-[15px] text-gray-500 hover:text-[#00A651] transition">+255 700 000 000</a>
+                            <div class="flex flex-col gap-1">
+                                <a href="tel:+255756856038"
+                                    class="text-[15px] text-gray-500 hover:text-[#00A651] transition">+255 793 660 594
+                                    038</a>
+                                <a href="tel:+255714779528"
+                                    class="text-[15px] text-gray-500 hover:text-[#00A651] transition">+255 716 609 930
+                                    528</a>
+                                <a href="tel:+255758779528"
+                                    class="text-[15px] text-gray-500 hover:text-[#00A651] transition">+255 745 680 195
+                                    528</a>
+                            </div>
                         </div>
                     </div>
 
@@ -192,7 +211,7 @@
                         <div class="flex flex-col gap-[2px]">
                             <p class="text-[13px] font-semibold text-[#003C13] tracking-[1px]">Email</p>
                             <a href="mailto:info@primealliance.com"
-                                class="text-[15px] text-gray-500 hover:text-[#00A651] transition break-all">info@primealliance.com</a>
+                                class="text-[15px] text-gray-500 hover:text-[#00A651] transition break-all">primealliancegroupltd@gmail.com</a>
                         </div>
                     </div>
 
@@ -255,14 +274,12 @@
                         <!-- Name + Phone -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                             <div class="flex flex-col gap-2">
-                                <label
-                                    class="text-[13px] font-semibold text-[#003C13] uppercase tracking-[0.8px]">Name</label>
+                                <label class="text-[13px] font-semibold text-[#003C13] tracking-[0.8px]">Name</label>
                                 <input type="text" placeholder="Your full name"
                                     class="w-full px-4 py-3 rounded-[10px] border border-gray-200 bg-[#F8FAF9] text-[15px] text-gray-700 placeholder-gray-400 outline-none focus:border-[#00A651] focus:ring-2 focus:ring-[#00A651]/10 transition">
                             </div>
                             <div class="flex flex-col gap-2">
-                                <label
-                                    class="text-[13px] font-semibold text-[#003C13] uppercase tracking-[0.8px]">Phone</label>
+                                <label class="text-[13px] font-semibold text-[#003C13] tracking-[0.8px]">Phone</label>
                                 <input type="tel" placeholder="+255 700 000 000"
                                     class="w-full px-4 py-3 rounded-[10px] border border-gray-200 bg-[#F8FAF9] text-[15px] text-gray-700 placeholder-gray-400 outline-none focus:border-[#00A651] focus:ring-2 focus:ring-[#00A651]/10 transition">
                             </div>
@@ -271,14 +288,13 @@
                         <!-- Email + Subject -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                             <div class="flex flex-col gap-2">
-                                <label class="text-[13px] font-semibold text-[#003C13] uppercase tracking-[0.8px]">Email
+                                <label class="text-[13px] font-semibold text-[#003C13] tracking-[0.8px]">Email
                                     <span class="text-[#00A651]">*</span></label>
                                 <input type="email" placeholder="your@email.com" required
                                     class="w-full px-4 py-3 rounded-[10px] border border-gray-200 bg-[#F8FAF9] text-[15px] text-gray-700 placeholder-gray-400 outline-none focus:border-[#00A651] focus:ring-2 focus:ring-[#00A651]/10 transition">
                             </div>
                             <div class="flex flex-col gap-2">
-                                <label
-                                    class="text-[13px] font-semibold text-[#003C13] uppercase tracking-[0.8px]">Subject
+                                <label class="text-[13px] font-semibold text-[#003C13] tracking-[0.8px]">Subject
                                     <span class="text-[#00A651]">*</span></label>
                                 <input type="text" placeholder="How can we help?" required
                                     class="w-full px-4 py-3 rounded-[10px] border border-gray-200 bg-[#F8FAF9] text-[15px] text-gray-700 placeholder-gray-400 outline-none focus:border-[#00A651] focus:ring-2 focus:ring-[#00A651]/10 transition">
@@ -287,8 +303,7 @@
 
                         <!-- Message -->
                         <div class="flex flex-col gap-2">
-                            <label
-                                class="text-[13px] font-semibold text-[#003C13] uppercase tracking-[0.8px]">Message</label>
+                            <label class="text-[13px] font-semibold text-[#003C13] tracking-[0.8px]">Message</label>
                             <textarea rows="5" placeholder="Write your message here..."
                                 class="w-full px-4 py-3 rounded-[10px] border border-gray-200 bg-[#F8FAF9] text-[15px] text-gray-700 placeholder-gray-400 outline-none focus:border-[#00A651] focus:ring-2 focus:ring-[#00A651]/10 transition resize-none"></textarea>
                         </div>
@@ -333,7 +348,7 @@
                 <!-- COMPANY -->
                 <div class="flex flex-col gap-[12px]">
                     <h3 class="text-[16px] font-semibold mb-1">Company</h3>
-                    <a href="about.html" class="text-[14px] text-white/80 hover:text-white transition-colors">Home</a>
+                    <a href="index.html" class="text-[14px] text-white/80 hover:text-white transition-colors">Home</a>
                     <a href="about.html" class="text-[14px] text-white/80 hover:text-white transition-colors">About</a>
                     <a href="service.html"
                         class="text-[14px] text-white/80 hover:text-white transition-colors">Services</a>
@@ -371,7 +386,11 @@
                     <h3 class="text-[16px] font-semibold mb-1">Contact</h3>
                     <p class="text-[14px] text-white/80">Dar es Salaam, Tanzania</p>
                     <a href="tel:+255700000000"
-                        class="text-[14px] text-white/80 hover:text-white transition-colors">+255 700 000 000</a>
+                        class="text-[14px] text-white/80 hover:text-white transition-colors">+255 793 660 594</a>
+                    <a href="tel:+255700000000"
+                        class="text-[14px] text-white/80 hover:text-white transition-colors">+255 716 609 930</a>
+                    <a href="tel:+255700000000"
+                        class="text-[14px] text-white/80 hover:text-white transition-colors">+255 745 680 195</a>
                     <a href="mailto:info@primealliance.com"
                         class="text-[14px] text-white/80 hover:text-white transition-colors break-all">primealliancegroupltd@gmail.com</a>
                 </div>
