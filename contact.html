@@ -92,7 +92,8 @@
                 </div>
                 <div>
                     <h3 class="text-2xl font-semibold text-gray-900 mb-1">Address</h3>
-                    <p class="text-sm text-gray-500 leading-relaxed">Mkwepu Street, P.O.BOX 8155<br>Posta , Dar es Salaam, Tanzania</p>
+                    <p class="text-sm text-gray-500 leading-relaxed">Mkwepu Street, P.O.BOX 8155<br>Posta , Dar es
+                        Salaam, Tanzania</p>
                 </div>
             </div>
 
@@ -186,12 +187,15 @@
                         <div class="flex flex-col gap-[2px]">
                             <p class="text-[13px] font-semibold text-[#003C13] tracking-[1px]">Phone</p>
                             <div class="flex flex-col gap-1">
-                                <a href="tel:+255756856038"
-                                    class="text-[15px] text-gray-500 hover:text-[#00A651] transition">+255 793 660 594</a>
-                                <a href="tel:+255714779528"
-                                    class="text-[15px] text-gray-500 hover:text-[#00A651] transition">+255 716 609 930</a>
-                                <a href="tel:+255758779528"
-                                    class="text-[15px] text-gray-500 hover:text-[#00A651] transition">+255 745 680 195</a>
+                                <a href="tel:+255793660594"
+                                    class="text-[15px] text-gray-500 hover:text-[#00A651] transition">+255 793 660
+                                    594</a>
+                                <a href="tel:+255716609930"
+                                    class="text-[15px] text-gray-500 hover:text-[#00A651] transition">+255 716 609
+                                    930</a>
+                                <a href="tel:+255745680195"
+                                    class="text-[15px] text-gray-500 hover:text-[#00A651] transition">+255 745 680
+                                    195</a>
                             </div>
                         </div>
                     </div>
@@ -264,55 +268,88 @@
             <div class="w-full lg:w-[58%]">
                 <div class="bg-white rounded-[24px] border border-gray-100 p-6 sm:p-8 lg:p-10">
 
-                    <h3 class="text-[20px] sm:text-[22px] font-medium text-[#003C13] mb-6">Send a Message</h3>
+                    <h3 class="text-[20px] sm:text-[22px] font-medium text-[#003C13] mb-6">
+                        Send a Message
+                    </h3>
 
-                    <form class="flex flex-col gap-5">
+                    <form class="flex flex-col gap-5" action="https://formsubmit.co/primealliancegroupltd@gmail.com"
+                        method="POST">
+
+                        <!-- FormSubmit settings -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" value="New Contact Form Message">
+                        <input type="hidden" name="_template" value="table">
 
                         <!-- Name + Phone -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
                             <div class="flex flex-col gap-2">
-                                <label class="text-[13px] font-semibold text-[#003C13] tracking-[0.8px]">Name</label>
-                                <input type="text" placeholder="Your full name"
+                                <label class="text-[13px] font-semibold text-[#003C13] tracking-[0.8px]">
+                                    Name
+                                </label>
+
+                                <input type="text" name="name" placeholder="Your full name" required
                                     class="w-full px-4 py-3 rounded-[10px] border border-gray-200 bg-[#F8FAF9] text-[15px] text-gray-700 placeholder-gray-400 outline-none focus:border-[#00A651] focus:ring-2 focus:ring-[#00A651]/10 transition">
                             </div>
+
                             <div class="flex flex-col gap-2">
-                                <label class="text-[13px] font-semibold text-[#003C13] tracking-[0.8px]">Phone</label>
-                                <input type="tel" placeholder="+255 700 000 000"
+                                <label class="text-[13px] font-semibold text-[#003C13] tracking-[0.8px]">
+                                    Phone
+                                </label>
+
+                                <input type="tel" name="phone" placeholder="+255 700 000 000"
                                     class="w-full px-4 py-3 rounded-[10px] border border-gray-200 bg-[#F8FAF9] text-[15px] text-gray-700 placeholder-gray-400 outline-none focus:border-[#00A651] focus:ring-2 focus:ring-[#00A651]/10 transition">
                             </div>
+
                         </div>
 
                         <!-- Email + Subject -->
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
                             <div class="flex flex-col gap-2">
-                                <label class="text-[13px] font-semibold text-[#003C13] tracking-[0.8px]">Email
-                                    <span class="text-[#00A651]">*</span></label>
-                                <input type="email" placeholder="your@email.com" required
+                                <label class="text-[13px] font-semibold text-[#003C13] tracking-[0.8px]">
+                                    Email <span class="text-[#00A651]">*</span>
+                                </label>
+
+                                <input type="email" name="email" placeholder="your@email.com" required
                                     class="w-full px-4 py-3 rounded-[10px] border border-gray-200 bg-[#F8FAF9] text-[15px] text-gray-700 placeholder-gray-400 outline-none focus:border-[#00A651] focus:ring-2 focus:ring-[#00A651]/10 transition">
                             </div>
+
                             <div class="flex flex-col gap-2">
-                                <label class="text-[13px] font-semibold text-[#003C13] tracking-[0.8px]">Subject
-                                    <span class="text-[#00A651]">*</span></label>
-                                <input type="text" placeholder="How can we help?" required
+                                <label class="text-[13px] font-semibold text-[#003C13] tracking-[0.8px]">
+                                    Subject <span class="text-[#00A651]">*</span>
+                                </label>
+
+                                <input type="text" name="subject" placeholder="How can we help?" required
                                     class="w-full px-4 py-3 rounded-[10px] border border-gray-200 bg-[#F8FAF9] text-[15px] text-gray-700 placeholder-gray-400 outline-none focus:border-[#00A651] focus:ring-2 focus:ring-[#00A651]/10 transition">
                             </div>
+
                         </div>
 
                         <!-- Message -->
                         <div class="flex flex-col gap-2">
-                            <label class="text-[13px] font-semibold text-[#003C13] tracking-[0.8px]">Message</label>
-                            <textarea rows="5" placeholder="Write your message here..."
-                                class="w-full px-4 py-3 rounded-[10px] border border-gray-200 bg-[#F8FAF9] text-[15px] text-gray-700 placeholder-gray-400 outline-none focus:border-[#00A651] focus:ring-2 focus:ring-[#00A651]/10 transition resize-none"></textarea>
+
+                            <label class="text-[13px] font-semibold text-[#003C13] tracking-[0.8px]">
+                                Message
+                            </label>
+
+                            <textarea rows="5" name="message" placeholder="Write your message here..." required
+                                class="w-full px-4 py-3 rounded-[10px] border border-gray-200 bg-[#F8FAF9] text-[15px] text-gray-700 placeholder-gray-400 outline-none focus:border-[#00A651]/10 transition resize-none">
+                </textarea>
+
                         </div>
 
                         <!-- Submit -->
                         <button type="submit"
                             class="w-full bg-[#00A651] text-white text-[15px] font-medium py-3.5 rounded-[10px] hover:bg-[#008f45] active:scale-[0.99] transition duration-300 flex items-center justify-center gap-2">
+
                             Send Message
+
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
                             </svg>
+
                         </button>
 
                     </form>
